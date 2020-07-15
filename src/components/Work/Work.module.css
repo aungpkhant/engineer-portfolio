@@ -1,0 +1,36 @@
+.workContainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.workContainer a:hover {
+    text-decoration: none;
+}
+
+.headerContainer {
+    font-family: "ObjectSansHeavy";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.headerContainer h4 {
+    margin-bottom: initial;
+}
+
+@media (min-width: 768px) {
+    .workContainer {
+        width: 60%;
+    }
+}
+@media (min-width: 1024px) {
+    .workContainer {
+        width: 40%;
+    }
+}

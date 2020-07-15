@@ -1,0 +1,42 @@
+.container {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.horizontal a {
+    color: #fb251b;
+    margin-right: 0.7rem;
+}
+.horizontal a:hover {
+    color: #fb251b;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: initial;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 40%;
+    }
+}
