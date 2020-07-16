@@ -42,7 +42,7 @@ export default function HomePage() {
             </div>
             <br />
             <div className={styles.linkContainer}>
-                <b>Documents</b>
+                <b>Download Documents</b>
                 <div className={styles.horizontal}>
                     <a
                         href={`${BASE_PATH_TO_DOCUMENT}${RESUME_FILENAME}`}
