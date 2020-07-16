@@ -96,12 +96,16 @@ export default function ProjectPage(props) {
             </div>
             <hr style={{ backgroundColor: "#fff" }} />
             <div className={styles.linksContainer}>
-                <NavLink to={`/work/`}>
-                    <div className={styles.prevProject}>&lt; All Projects</div>
-                </NavLink>
-                <NavLink to={`/work/${projects[nextProjectIndex].slug}`}>
-                    <div className={styles.nextProject}>Next Project &gt;</div>
-                </NavLink>
+                <div className={styles.prevProject}>
+                    <NavLink to={`/work/`}>&lt; All Projects</NavLink>
+                </div>
+
+                <div className={styles.nextProject}>
+                    {" "}
+                    <NavLink to={`/work/${projects[nextProjectIndex].slug}`}>
+                        Next Project &gt;
+                    </NavLink>
+                </div>
             </div>
             {lightBoxState.isOpen && lightBox}
         </div>
