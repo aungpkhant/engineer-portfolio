@@ -4,19 +4,23 @@ import { Tag } from "../../index";
 import { NavLink, useLocation } from "react-router-dom";
 import slugify from "../../../util/slugify";
 
+const BASE_PATH_TO_IMAGES = `${process.env.PUBLIC_URL}/images/`;
+
 export default function ProjectCard(props) {
     let location = useLocation();
     let slug = slugify(props.title);
+
+    const tags = props.tags.map((tag) => <Tag text={tag} />);
 
     return (
         <NavLink to={`${location.pathname}${slug}`}>
             <div className={styles.cardContainer}>
                 <div className={styles.mediaContainer}>
-                    <img src={props.imgLink} alt="" />
-                    <div className={styles.tagsContainer}>
-                        <Tag text="Default" />
-                        <Tag text="Default" />
-                    </div>
+                    <img
+                        src={`${BASE_PATH_TO_IMAGES}${props.imgLink}`}
+                        alt=""
+                    />
+                    <div className={styles.tagsContainer}>{tags}</div>
                 </div>
                 <div className={styles.descContainer}>
                     <h3>{props.title}</h3>

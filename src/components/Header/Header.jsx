@@ -18,12 +18,16 @@ const Header = (props) => {
     return (
         <div>
             <Navbar dark expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+                <NavbarBrand>
+                    <NavLink className="nav-link" to="/">
+                        Zwe Lin Htet | David
+                    </NavLink>
+                </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink className="nav-link" to="/home/">
+                            <NavLink exact={true} className="nav-link" to="/">
                                 Home
                             </NavLink>
                         </NavItem>

@@ -1,3 +1,10 @@
 .navbar {
     background-color: initial !important;
 }
+
+.navbar-brand a {
+    color: #fff;
+}
+.navbar-brand a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}

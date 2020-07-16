@@ -30,11 +30,12 @@
 }
 
 .tagsContainer {
-    padding: 0.6rem;
+    padding: 0 0.6rem 0.6rem 0.6rem;
 }
 
 .tagsContainer div {
     margin-right: 0.6rem;
+    margin-top: 0.6rem;
 }
 
 @media (min-width: 768px) {

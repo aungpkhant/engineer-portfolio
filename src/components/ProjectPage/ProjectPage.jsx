@@ -5,8 +5,11 @@ import slugify from "../../util/slugify";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function ProjectPage(props) {
+    const BASE_PATH_TO_IMAGES = `${process.env.PUBLIC_URL}/images/`;
+
     const initLightBoxState = {
         photoIndex: 0,
         isOpen: false,
@@ -23,9 +26,14 @@ export default function ProjectPage(props) {
 
     const lightBox = (
         <Lightbox
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            mainSrc={BASE_PATH_TO_IMAGES + images[photoIndex]}
+            nextSrc={
+                BASE_PATH_TO_IMAGES + images[(photoIndex + 1) % images.length]
+            }
+            prevSrc={
+                BASE_PATH_TO_IMAGES +
+                images[(photoIndex + images.length - 1) % images.length]
+            }
             onCloseRequest={() =>
                 setLightBoxState({ ...lightBoxState, isOpen: false })
             }
@@ -55,12 +63,18 @@ export default function ProjectPage(props) {
 
     return (
         <div className={styles.container}>
+            <Helmet>
+                <title>
+                    {`${project.title} | By Zwe Htet (David) Electrical and Computer Engineer`}
+                </title>
+                <meta name="description" content={project.brief_desc} />
+            </Helmet>
             <h3>{project.title}</h3>
             <img
                 onClick={() =>
                     setLightBoxState({ ...lightBoxState, isOpen: true })
                 }
-                src={images[0]}
+                src={BASE_PATH_TO_IMAGES + images[0]}
                 alt=""
             />
             <br />
@@ -81,7 +95,7 @@ export default function ProjectPage(props) {
                 </div>
             </div>
             <hr style={{ backgroundColor: "#fff" }} />
-            <div>
+            <div className={styles.linksContainer}>
                 <NavLink to={`/work/`}>
                     <div className={styles.prevProject}>&lt; All Projects</div>
                 </NavLink>

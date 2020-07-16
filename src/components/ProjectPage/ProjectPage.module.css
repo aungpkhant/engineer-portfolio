@@ -27,6 +27,20 @@
     flex-direction: column;
 }
 
+.linksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linksContainer a {
+    color: #fb251b;
+}
+
+.linksContainer a:hover {
+    color: #fb251b;
+}
+
 @media (min-width: 768px) {
     .detailsContainer {
         display: grid;
@@ -39,6 +53,11 @@
 
     .container {
         width: 60%;
+    }
+
+    .linksContainer {
+        flex-direction: column;
+        justify-content: initial;
     }
 }
 
