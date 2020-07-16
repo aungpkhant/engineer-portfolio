@@ -4,7 +4,7 @@ import styles from "./HomePage.module.css";
 const BASE_PATH_TO_DOCUMENT = `${process.env.PUBLIC_URL}/documents/`;
 const RESUME_FILENAME = "resume.pdf";
 const RESUME_DOWNLOAD_NAME = "Resume-Zwe Lin(David)";
-const TRANSCRIPT_FILENAME = "academic_trascript.pdf";
+const TRANSCRIPT_FILENAME = "academic_transcript.pdf";
 const TRANSCRIPT_DOWNLOAD_NAME = "Transcript-Zwe Lin(David)";
 
 export default function HomePage() {
@@ -36,7 +36,6 @@ export default function HomePage() {
             <div className={styles.linkContainer}>
                 <b>Get to know me!</b>
                 <div className={styles.horizontal}>
-                    <a href="#">Github</a>
                     <a href="https://www.linkedin.com/in/zwehtet/">LinkedIn</a>
                 </div>
             </div>
