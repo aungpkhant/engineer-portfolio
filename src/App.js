@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Header, HomePage, Work, ProjectPage } from "./components/index";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
 
 function App() {
     return (
@@ -12,6 +17,7 @@ function App() {
                     <Route exact path="/work" component={Work} />
                     <Route path="/work/:title" component={ProjectPage} />
                     <Route exact path="/" component={HomePage} />
+                    <Redirect to="/" />
                 </Switch>
             </Router>
         </div>
