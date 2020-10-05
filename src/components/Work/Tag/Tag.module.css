@@ -1,10 +1,10 @@
 .tagContainer {
-    background: #ffd3b6;
-    color: #524238;
-    padding: 0.3rem;
-    font-size: 0.8rem;
-    border-radius: 0.5rem;
-    letter-spacing: 0.4px;
-    display: inline-flex;
-    font-weight: 600;
+	background-color: #f0c3c4 !important;
+	color: #3d1011 !important;
+	padding: 0.3rem;
+	font-size: 0.8rem;
+	border-radius: 0.5rem;
+	letter-spacing: 0.4px;
+	display: inline-flex;
+	font-weight: 600;
 }

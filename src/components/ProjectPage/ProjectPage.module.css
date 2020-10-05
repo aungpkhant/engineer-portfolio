@@ -1,68 +1,82 @@
 .container {
-    margin-top: 1.5rem;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
-    padding-bottom: 3rem;
+	margin-top: 1.5rem;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	padding-bottom: 3rem;
 }
 
-.container img {
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+.imgContainer {
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	position: relative;
 }
 
-.muted {
-    color: rgb(139, 139, 139);
+.imgContainer img {
+	width: 100%;
+}
+
+.imgContainer .muted {
+	color: rgb(139, 139, 139);
+}
+
+.seeMoreButton {
+	position: absolute !important;
+	right: 5px;
+	bottom: 5px;
+	background-color: #f0c3c4 !important;
+	color: #3d1011 !important;
 }
 
 .nextProject {
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .detailsContainer {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .linksContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .linksContainer a {
-    color: #fb251b;
+	color: #fb251b;
 }
 
 .linksContainer a:hover {
-    color: #fb251b;
+	color: #fb251b;
 }
 
 @media (min-width: 768px) {
-    .detailsContainer {
-        display: grid;
-        grid-template-columns: 6fr 4fr;
-    }
+	.detailsContainer {
+		display: grid;
+		grid-template-columns: 6fr 4fr;
+	}
 
-    .detailsContainer > div {
-        padding: 2rem;
-    }
+	.detailsContainer > div {
+		padding: 2rem;
+	}
 
-    .container {
-        width: 60%;
-    }
+	.container {
+		width: 60%;
+	}
 
-    .linksContainer {
-        flex-direction: column;
-        justify-content: initial;
-    }
+	.linksContainer {
+		flex-direction: column;
+		justify-content: initial;
+	}
 }
 
 @media (min-width: 1024px) {
-    .container {
-        width: 40%;
-    }
+	.container {
+		width: 40%;
+	}
 }
