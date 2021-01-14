@@ -4,7 +4,7 @@ import { Tag } from "../../index";
 import { NavLink, useLocation } from "react-router-dom";
 import slugify from "../../../util/slugify";
 
-const BASE_PATH_TO_IMAGES = `${process.env.PUBLIC_URL}/images/`;
+const BASE_PATH_TO_IMAGES = `images/`;
 
 export default function ProjectCard(props) {
     let location = useLocation();
