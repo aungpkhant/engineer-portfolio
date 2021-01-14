@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./HomePage.module.css";
 
-const BASE_PATH_TO_DOCUMENT = `${process.env.PUBLIC_URL}/documents/`;
+const BASE_PATH_TO_DOCUMENT = `documents/`;
 const RESUME_FILENAME = "resume.pdf";
 const RESUME_DOWNLOAD_NAME = "Resume-Zwe Lin(David)";
 const TRANSCRIPT_FILENAME = "academic_transcript.pdf";
